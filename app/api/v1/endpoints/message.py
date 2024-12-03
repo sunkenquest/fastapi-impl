@@ -1,28 +1,15 @@
-import os
-from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException
-from twilio.rest import Client
 from app.schemas.message import SmsRequest
-
+from app.services.message_service import send_message
 
 router = APIRouter()
-
-load_dotenv()
-
-account_sid = os.getenv("TWILIO_ACC_SID")
-auth_token = os.getenv("TWILIO_AUTH_TOKEN")
-twilio_phone_number = os.getenv("TWILIO_PHONE_NUMBER")
 
 
 @router.post("/")
 def send_sms(request: SmsRequest):
-    try:
-        client = Client(account_sid, auth_token)
-        sms = client.messages.create(
-            body=request.message,
-            from_=twilio_phone_number,
-            to=request.to,
+    response = send_message(request.message, request.to)
+    if response["status_code"] != 200:
+        raise HTTPException(
+            status_code=response["status_code"], detail=response["message"]
         )
-        return {"message": f"Message sent successfully: {sms.sid}"}
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Failed to send message: {str(e)}")
+    return response
