@@ -1,7 +1,8 @@
-from fastapi import APIRouter
-from flask_graphql import GraphQLView
-from app.schemas.graphql import schema
+import strawberry
 
-graphql_router = APIRouter()
 
-graphql_router.add_route("/graphql", GraphQLView.as_view(graphiql=True, schema=schema))
+@strawberry.type
+class Query:
+    @strawberry.field
+    def hello(self) -> str:
+        return "Hello World"
