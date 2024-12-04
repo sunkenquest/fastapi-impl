@@ -18,4 +18,4 @@ app.include_router(message.router, prefix="/api/v1/sms", tags=["Message"])
 # graphql
 schema = strawberry.Schema(Query)
 graphql_app = GraphQLRouter(schema)
-app.include_router(graphql_app, prefix="/graphql")
+app.include_router(graphql_app, prefix="/api/v1/graphql")
