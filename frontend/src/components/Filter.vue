@@ -1,5 +1,5 @@
 <template>
-    <div class="relative inline-block">
+    <div class="relative inline-block" ref="dropdownContainer">
         <button @click="toggleDropdown" id="dropdownDefaultButton"
             class="dark:bg-gray-900 text-white hover:bg-white hover:text-black focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center"
             type="button">
@@ -57,6 +57,18 @@ export default {
         toggleDropdown() {
             this.isDropdownVisible = !this.isDropdownVisible;
         },
+        handleClickOutside(event) {
+            if (this.$refs.dropdownContainer && !this.$refs.dropdownContainer.contains(event.target)) {
+                this.isDropdownVisible = false;
+            }
+        },
+    },
+
+    mounted() {
+        document.addEventListener('click', this.handleClickOutside);
+    },
+    beforeDestroy() {
+        document.removeEventListener('click', this.handleClickOutside);
     },
 };
 </script>
