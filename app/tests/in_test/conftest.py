@@ -4,8 +4,6 @@ from app.db.connection import get_db, get_test_db, Base, test_engine
 from app.main import app
 from sqlalchemy.orm import sessionmaker
 
-app.dependency_overrides[get_db] = get_test_db
-
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=test_engine)
 
 
