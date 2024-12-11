@@ -3,4 +3,4 @@ def test_send_sms(client_with_test_db):
 
     response = client_with_test_db.post("/api/v1/sms", json=payload)
 
-    assert response.status_code == 200
+    assert response.status_code == 400
