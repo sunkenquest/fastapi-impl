@@ -12,7 +12,7 @@
         </button>
 
         <div :class="{ block: isDropdownVisible, hidden: !isDropdownVisible }" id="dropdownDefaultCheckbox"
-            class="z-10 w-48  divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-900 m-2">
+            class="z-50 absolute top-full mt-2 w-48 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-900 m-2">
             <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCheckboxButton">
                 <li>
                     <div class="flex items-center">

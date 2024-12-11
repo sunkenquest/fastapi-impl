@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from sqlalchemy.orm import Session
-from twilio.rest import Client
+from twilio.rest import Client  # type: ignore
 from app.db.models import Message
 
 
