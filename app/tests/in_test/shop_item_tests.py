@@ -1,4 +1,4 @@
-def test_post_shop_item(client_with_test_db, test_db):
+def test_post_shop_item(client_with_test_db):
     payload = {
         "name": "Product 1",
         "rate": 9,

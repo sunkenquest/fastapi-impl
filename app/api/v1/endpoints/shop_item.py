@@ -7,7 +7,6 @@ from app.services.shop_item_service import (
     create_shop_item_service,
     get_all_items_service,
 )
-from app.db.models import ShopItem
 
 router = APIRouter()
 
