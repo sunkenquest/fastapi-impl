@@ -1,9 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class ShopItemBase(BaseModel):
     name: str
-    rate: int
+    rate: int | None = Field(None, description="Rating of the product, optional")
     description: str
     price: float
     image: str
