@@ -32,6 +32,7 @@ export default {
                 {
                     id: 1,
                     name: "Product 1",
+                    rate: 9,
                     description: "This is the first product.",
                     price: 19.99,
                     image: "https://via.placeholder.com/300x200",
@@ -39,6 +40,7 @@ export default {
                 {
                     id: 2,
                     name: "Product 2",
+                    rate: 8,
                     description: "This is the second product.",
                     price: 29.99,
                     image: "https://via.placeholder.com/300x200",
@@ -46,6 +48,7 @@ export default {
                 {
                     id: 3,
                     name: "Product 3",
+                    rate: 8,
                     description: "This is the third product.",
                     price: 39.99,
                     image: "https://via.placeholder.com/300x200",
@@ -53,6 +56,7 @@ export default {
                 {
                     id: 4,
                     name: "Product 4",
+                    rate: 6,
                     description: "This is the fourth product.",
                     price: 49.99,
                     image: "https://via.placeholder.com/300x200",
@@ -60,6 +64,7 @@ export default {
                 {
                     id: 1,
                     name: "Product 1",
+                    rate: 1,
                     description: "This is the first product.",
                     price: 19.99,
                     image: "https://via.placeholder.com/300x200",
@@ -67,6 +72,7 @@ export default {
                 {
                     id: 2,
                     name: "Product 2",
+                    rate: 1,
                     description: "This is the second product.",
                     price: 29.99,
                     image: "https://via.placeholder.com/300x200",
@@ -74,6 +80,7 @@ export default {
                 {
                     id: 3,
                     name: "Product 3",
+                    rate: 1,
                     description: "This is the third product.",
                     price: 39.99,
                     image: "https://via.placeholder.com/300x200",
@@ -81,6 +88,7 @@ export default {
                 {
                     id: 4,
                     name: "Product 4",
+                    rate: 1,
                     description: "This is the fourth product.",
                     price: 49.99,
                     image: "https://via.placeholder.com/300x200",
